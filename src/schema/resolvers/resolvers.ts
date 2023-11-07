@@ -17,8 +17,3 @@ export const resolvers = {
         }
     },
 };
-
-// {
-//     "password": "qwrq11231",
-//     "username": "test11123"
-//   }
