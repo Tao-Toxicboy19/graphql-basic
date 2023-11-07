@@ -1,5 +1,5 @@
 import { User } from "@prisma/client";
-import { createUser, findAllUsers, findOneUser } from "../../controllers/users";
+import { createUser, findAllUsers, findOneUser, loginlocal } from "../../controllers/users";
 
 export const resolvers = {
     Query: {
@@ -12,5 +12,13 @@ export const resolvers = {
         createUser: async (_: User, { username, password }: User) => {
             return await createUser(username, password)
         },
+        login: async (_: User, { username, password }: User) => {
+            return await loginlocal(username, password)
+        }
     },
 };
+
+// {
+//     "password": "qwrq11231",
+//     "username": "test11123"
+//   }
