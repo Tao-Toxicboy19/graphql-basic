@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    ports:
+      - "3050:5432"
+    environment:
+      POSTGRES_DB: grahpql-basic
+      POSTGRES_PASSWORD: testpass123
+      POSTGRES_USER: postgres
+    volumes:
+      - D:\GraphQL\grahpql-basic\database:/var/lib/postgresql/data
